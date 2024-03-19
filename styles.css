@@ -1,0 +1,218 @@
+*{
+	font-family: 'Ubuntu', sans-serif;
+	text-decoration: none;
+	list-style: none;
+	scroll-behavior: smooth;
+}
+body{
+	overflow-x: hidden;
+	padding: 0;
+	margin: 0;
+}
+a, button{
+	cursor: pointer;
+}
+.container-fluid{
+	width: 100%;
+	padding: 0;
+}
+.container{
+	width: 80%;
+	margin: auto;
+}
+
+/*Header*/
+.Header{
+	height: 100vh;
+	background-image: url('./images/Background.jpg');
+	background-color: rgba(0, 0, 0, 0.3);
+	background-blend-mode: overlay;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+}
+
+/*Navbars*/
+.main-nav{
+	margin-bottom: 20px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.nav-logo a{
+	font-size: 32px;
+	font-weight: 500;
+	color: white;
+}
+.nav-logo a:hover{
+	color: skyblue;
+	transition: 0.8s ease-in ;
+}
+.nav-links ul{
+	padding-left: 0;
+	display: flex;
+	flex-direction: row;
+	gap: 30px;
+}
+.nav-links ul li button{
+	padding: 6px 14px;
+	font-size: 18px;
+	color: white;
+	background-color: transparent;
+	border: none;
+	border-radius: 14px;
+}
+
+.nav-links ul li button:hover, .nav-links ul li button.active{
+	background-color: white;
+	color: navy;
+	transition: 0.8s ease-in;
+}
+.nav-btn button{
+	font-size: 18px;
+	background-color: transparent;
+	color: skyblue;
+	padding: 6px 12px;
+	border: 2px solid skyblue;
+	border-radius: 14px;
+}
+.nav-btn button:hover{
+	background-color: skyblue;
+	color: white;
+	transition: 0.8s ease-in;
+}
+
+.second-nav{
+	margin-bottom: 20px;
+	display: none;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.toggler{
+	display: block;
+}
+.toggler a{
+	font-size: 24px;
+	color: white;
+}
+.open{
+	display: block;
+}
+.hide{
+	display: none;
+}
+
+.nav-collapse{
+	display: none;
+	margin: 0 auto;
+}
+.nav-collapse ul{
+	padding-left: 0;
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+}
+.nav-collapse ul li button{
+	font-size: 16px;
+	color: white;
+	background-color: transparent;
+	padding: 6px 10px;
+	border: none;
+	border-radius: 14px;
+}
+.nav-collapse ul li button.active, .nav-collapse ul li button:hover{
+	background-color: white;
+	color: navy;
+	transition: 0.8s ease-in;
+}
+
+/*Hero*/
+.hero-content{
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+}
+.hero-content h2{
+	font-size: 68px;
+	font-weight: 400;
+	color: skyblue;
+	margin-bottom: 10px;
+}
+.hero-content p{
+	font-size: 16px;
+	font-weight: 300;
+	color: white;
+	width: 50%;
+	margin: 10px auto;
+	text-align: justify;
+}
+.hero-btn{
+	margin-top: 100px;
+}
+.hero-btn button{
+	font-size: 16px;
+	color: skyblue;
+	background-color: transparent;
+	padding: 6px 16px;
+	border: 2px solid skyblue;
+	border-radius: 14px;
+}
+
+.hero-btn button:hover{
+	background-color: skyblue;
+	color: white;
+	transition: 0.8s ease-in;
+}
+
+/*media queries*/
+@media screen and (max-width: 900px){
+	.main-nav{
+		display: none;
+	}
+	.second-nav{
+		display: flex;
+	}
+	.nav-logo a{
+		font-size: 28px;
+	}
+	.nav-btn button{
+		font-size: 16px;
+		padding: 6px 10px;
+	}
+}
+
+@media screen and (max-width: 768px){
+	.hero-content h2{
+		font-size: 56px;
+	}
+	.hero-content p{
+		font-size: 14px;
+	}
+}
+
+@media screen and (max-width: 576px){
+	.hero-content h2{
+		font-size: 48px;
+	}
+}
+@media screen and (max-width: 480px){
+	.nav-logo a{
+		font-size: 24px;
+	}
+	.nav-btn button{
+		font-size: 14px;
+		padding: 6px 8px;
+	}
+	.nav-collapse ul li button{
+		font-size: 14px;
+		padding: 6px 8px;
+	}
+	.hero-content h2{
+		font-size: 42px;
+	}
+	.hero-content p{
+		font-size: 12px;
+	}
+}
